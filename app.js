@@ -1,13 +1,11 @@
 const express = require("express");
 const app = express();
 const MongoClient = require("mongodb").MongoClient;
-var cors = require("cors");
+
 const PORT = process.env.PORT || 3000
 
 app.use(express.json()); // to support JSON-encoded bodies
 app.use(express.urlencoded({ extended: true }));
-
-app.use(cors({ origin: "http://localhost:3000" }));
 
 app.listen(PORT, function () {
   console.log(`listening on ${PORT}`);
