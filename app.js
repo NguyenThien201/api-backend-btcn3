@@ -1,9 +1,10 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const MongoClient = require("mongodb").MongoClient;
 
 const PORT = process.env.PORT || 3000
-const cors = require("cors");
+
 app.use(express.json()); // to support JSON-encoded bodies
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({ origin: "https://61827ec6425e32bde668ad8e--angry-yalow-1d43a4.netlify.app" }));
